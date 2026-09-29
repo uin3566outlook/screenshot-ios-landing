@@ -1,0 +1,11 @@
+.language-picker{display:none;align-items:center;gap:3px;flex:none;padding:4px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.055)}
+.i18n-ready .language-picker{display:flex}
+.language-picker button{appearance:none;border:0;border-radius:999px;min-width:36px;min-height:32px;padding:0 8px;background:transparent;color:#bfc1b7;font-family:inherit;font-size:11px;font-weight:700;line-height:1;cursor:pointer;transition:background .2s,color .2s}
+.language-picker button:hover{color:#fff}
+.language-picker button[aria-pressed="true"]{background:#f8ca46;color:#171813}
+.language-picker button:focus-visible{outline:2px solid #f8ca46;outline-offset:3px}
+.desktop-nav{margin-right:12px}
+.footer-inner{flex-wrap:wrap;column-gap:20px;row-gap:12px}
+@media(max-width:800px){.header-link{display:none}.language-picker{margin-left:auto}}
+@media(max-width:520px){.header-inner{gap:12px}.language-picker{padding:3px}.language-picker button{min-width:30px;min-height:29px;padding:0 5px}.footer-inner{justify-content:flex-start}.footer-inner>span{order:0;width:auto}}
+@media(prefers-reduced-motion:reduce){.language-picker button{transition:none}}
