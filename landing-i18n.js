@@ -153,6 +153,20 @@
     "zh-Hant": "從 App Store 下載",
     en: "Download on the App Store",
   };
+  const screenshots = {
+    en: {
+      home: ["assets/home-en-4a66b80a.png", 1206, 2622],
+      editor: ["assets/editor-en-7188eb1a.png", 1206, 2622],
+    },
+    "zh-Hans": {
+      home: ["assets/home-37864b14.png", 1170, 2532],
+      editor: ["assets/editor-5f77dcef.png", 1170, 2532],
+    },
+    "zh-Hant": {
+      home: ["assets/home-zh-Hant-a2f56f9c.png", 1206, 2622],
+      editor: ["assets/editor-zh-Hant-189871aa.png", 1206, 2622],
+    },
+  };
 
   const storeURL = document.body.dataset.appStoreUrl;
   let storeAvailable = false;
@@ -217,6 +231,14 @@
     const suffix = language === "en" ? "" : `-${language}`;
     for (const link of document.querySelectorAll("[data-legal-link]")) {
       link.href = `${link.dataset.legalLink}${suffix}.html`;
+    }
+    for (const link of document.querySelectorAll("[data-screen]")) {
+      const [src, width, height] = screenshots[language][link.dataset.screen];
+      const image = link.querySelector("img");
+      link.href = src;
+      image.src = src;
+      image.width = width;
+      image.height = height;
     }
     if (remember) {
       const url = new URL(location.href);
