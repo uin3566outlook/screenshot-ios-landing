@@ -9,14 +9,13 @@
       "产品体验": "Experience",
       "功能亮点": "Features",
       "使用方式": "How it works",
-      "页面源码": "Source code",
-      "开发预览 · 为 iPhone 而做的截图工具": "Preview · A focused screenshot tool for iPhone",
+      "为 iPhone 而做的截图工具": "A focused screenshot tool for iPhone",
       "截图，": "Capture.",
       "只发重点。": "Share the point.",
       "看到值得分享的内容，直接框选、标注、发走。少一点来回切换，多一点一目了然。": "See something worth sharing? Crop it, mark it, and send it. Less switching between apps, more clarity at a glance.",
       "看看怎么用": "See how it works",
-      "查看页面源码": "View source code",
-      "原生 iOS 应用 · 尚未开放公开下载": "Native iOS app · Public download coming soon",
+      "即将登陆 App Store": "Coming soon to the App Store",
+      "原生 iOS 应用": "Native iOS app",
       "点击查看高清原图 ↗": "Tap to view full resolution ↗",
       "向下探索": "Scroll to explore",
       "把复杂留在身后": "Leave the extra steps behind",
@@ -74,14 +73,13 @@
       "产品体验": "產品體驗",
       "功能亮点": "功能亮點",
       "使用方式": "使用方式",
-      "页面源码": "頁面原始碼",
-      "开发预览 · 为 iPhone 而做的截图工具": "開發預覽 · 為 iPhone 打造的截圖工具",
+      "为 iPhone 而做的截图工具": "為 iPhone 打造的截圖工具",
       "截图，": "截圖，",
       "只发重点。": "只傳重點。",
       "看到值得分享的内容，直接框选、标注、发走。少一点来回切换，多一点一目了然。": "看到值得分享的內容，直接框選、標註、傳送。少一點來回切換，多一點一目瞭然。",
       "看看怎么用": "看看怎麼用",
-      "查看页面源码": "檢視頁面原始碼",
-      "原生 iOS 应用 · 尚未开放公开下载": "原生 iOS App · 尚未開放公開下載",
+      "即将登陆 App Store": "即將登陸 App Store",
+      "原生 iOS 应用": "原生 iOS App",
       "点击查看高清原图 ↗": "點選檢視高解析度原圖 ↗",
       "向下探索": "向下探索",
       "把复杂留在身后": "把繁瑣留在身後",
@@ -150,6 +148,28 @@
     "zh-Hant": "為 iPhone 打造的輕量截圖編輯體驗。框選重點，隨手標註，直接分享。",
     en: "A focused screenshot editing experience for iPhone. Crop the essentials, add context, and share directly.",
   };
+  const storeAvailableLabels = {
+    "zh-Hans": "在 App Store 下载",
+    "zh-Hant": "從 App Store 下載",
+    en: "Download on the App Store",
+  };
+
+  const storeURL = document.body.dataset.appStoreUrl;
+  let storeAvailable = false;
+  if (storeURL) {
+    try {
+      const url = new URL(storeURL);
+      storeAvailable = url.protocol === "https:" && url.hostname === "apps.apple.com";
+      if (storeAvailable) {
+        for (const link of document.querySelectorAll("[data-app-store-link]")) {
+          link.href = url.href;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.removeAttribute("aria-disabled");
+        }
+      }
+    } catch (_) { /* Keep the coming-soon buttons disabled. */ }
+  }
 
   const textNodes = [];
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -168,27 +188,17 @@
     }
   }
 
-  const choiceKey = "clipshare.landingLanguage";
-  const fromBrowser = () => {
-    const candidate = navigator.languages?.[0] || navigator.language || "";
-    if (/^zh-(Hant|TW|HK|MO)/i.test(candidate)) return "zh-Hant";
-    if (/^zh/i.test(candidate)) return "zh-Hans";
-    return "en";
-  };
   const initialLanguage = () => {
     const requested = new URLSearchParams(location.search).get("lang");
-    if (supported.includes(requested)) return requested;
-    try {
-      const saved = localStorage.getItem(choiceKey);
-      if (supported.includes(saved)) return saved;
-    } catch (_) { /* Browsers may disable local storage. */ }
-    return fromBrowser();
+    return supported.includes(requested) ? requested : "en";
   };
 
   const render = (language, remember) => {
     const copy = translations[language] || {};
     for (const { node, original, key } of textNodes) {
-      node.nodeValue = original.replace(key, copy[key] ?? key);
+      const translated = storeAvailable && key === "即将登陆 App Store"
+        ? storeAvailableLabels[language] : (copy[key] ?? key);
+      node.nodeValue = original.replace(key, translated);
     }
     for (const { element, name, key } of attributes) {
       element.setAttribute(name, copy[key] ?? key);
@@ -209,7 +219,6 @@
       link.href = `${link.dataset.legalLink}${suffix}.html`;
     }
     if (remember) {
-      try { localStorage.setItem(choiceKey, language); } catch (_) { /* Optional preference. */ }
       const url = new URL(location.href);
       url.searchParams.set("lang", language);
       history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);

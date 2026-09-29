@@ -4,6 +4,8 @@
 .language-picker button:hover{color:#fff}
 .language-picker button[aria-pressed="true"]{background:#f8ca46;color:#171813}
 .language-picker button:focus-visible{outline:2px solid #f8ca46;outline-offset:3px}
+.app-store-button[aria-disabled="true"]{cursor:default;opacity:.76;box-shadow:none}
+.app-store-button[aria-disabled="true"]:hover{transform:none}
 .desktop-nav{margin-right:12px}
 .footer-inner{flex-wrap:wrap;column-gap:20px;row-gap:12px}
 @media(max-width:800px){.header-link{display:none}.language-picker{margin-left:auto}}
