@@ -62,6 +62,8 @@
       "局部分享，返回顶部": "ClipShare, back to top",
       "页面导航": "Page navigation",
       "局部分享 App 当前首页预览": "Current ClipShare app home screen preview",
+      "局部分享 App 当前首页预览与操作演示": "Current ClipShare home screen and product demo",
+      "局部分享操作演示：截图、裁剪并分享到聊天 App": "ClipShare demo: capture, crop, and share to a chat app",
       "打开高清首页截图": "Open full-resolution home screen image",
       "局部分享首页：介绍截图、框选与分享流程，并提供设置极速截图和体验示例入口": "ClipShare home screen with capture, crop, and share guidance, Quick Capture setup, and a sample entry point",
       "打开高清编辑器截图": "Open full-resolution editor image",
@@ -126,6 +128,8 @@
       "局部分享，返回顶部": "局部分享，返回頂部",
       "页面导航": "頁面導覽",
       "局部分享 App 当前首页预览": "局部分享 App 目前首頁預覽",
+      "局部分享 App 当前首页预览与操作演示": "局部分享 App 目前首頁預覽與操作示範",
+      "局部分享操作演示：截图、裁剪并分享到聊天 App": "局部分享操作示範：截圖、裁剪並分享到聊天 App",
       "打开高清首页截图": "開啟高解析度首頁截圖",
       "局部分享首页：介绍截图、框选与分享流程，并提供设置极速截图和体验示例入口": "局部分享首頁：介紹截圖、框選與分享流程，並提供極速截圖設定和體驗範例入口",
       "打开高清编辑器截图": "開啟高解析度編輯器截圖",
@@ -167,6 +171,27 @@
       editor: ["assets/editor-zh-Hant-189871aa.png", 1206, 2622],
     },
   };
+  const promoVideo = document.querySelector("[data-promo-video]");
+  const soundButton = document.querySelector("[data-promo-sound]");
+  const soundLabels = {
+    en: ["Turn sound on", "Turn sound off"],
+    "zh-Hans": ["开启声音", "关闭声音"],
+    "zh-Hant": ["開啟聲音", "關閉聲音"],
+  };
+  const renderSoundButton = (language) => {
+    const soundOn = !promoVideo.muted;
+    const label = soundLabels[language][soundOn ? 1 : 0];
+    soundButton.querySelector("[data-sound-label]").textContent = label;
+    soundButton.setAttribute("aria-label", label);
+    soundButton.setAttribute("aria-pressed", String(soundOn));
+  };
+
+  soundButton.addEventListener("click", () => {
+    promoVideo.muted = !promoVideo.muted;
+    promoVideo.play().catch(() => {});
+    renderSoundButton(document.documentElement.lang);
+  });
+  promoVideo.addEventListener("volumechange", () => renderSoundButton(document.documentElement.lang));
 
   const storeURL = document.body.dataset.appStoreUrl;
   let storeAvailable = false;
@@ -240,6 +265,7 @@
       image.width = width;
       image.height = height;
     }
+    renderSoundButton(language);
     if (remember) {
       const url = new URL(location.href);
       url.searchParams.set("lang", language);
@@ -252,4 +278,5 @@
   }
   render(initialLanguage(), false);
   document.documentElement.classList.add("i18n-ready");
+  promoVideo.play().catch(() => {});
 })();
