@@ -1,73 +1,28 @@
-.hero-art .phone-hero {
-  position: absolute;
-  z-index: 1;
-  top: 128px;
-  left: calc(50% - 212px);
-  width: 225px;
-  transform: rotate(-8deg);
-  animation: none;
-}
-
-.phone-promo {
-  position: absolute;
-  z-index: 2;
-  top: 72px;
-  left: calc(50% - 8px);
-  width: 255px;
-  transform: rotate(5deg);
-}
-
-.phone-promo video {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
-  border-radius: 36px;
-  background: #171915;
-}
-
-.promo-sound-toggle {
-  position: absolute;
-  z-index: 4;
-  right: 12px;
-  bottom: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  min-height: 38px;
-  padding: 0 12px;
-  border: 1px solid rgba(255, 255, 255, .38);
-  border-radius: 999px;
-  background: rgba(13, 15, 13, .82);
-  color: #fff;
-  font: 700 11px/1 -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  white-space: nowrap;
-  cursor: pointer;
-  backdrop-filter: blur(12px);
-}
-
-.promo-sound-toggle:hover { background: rgba(36, 39, 31, .94); }
+.promo-demo { background: #191b16; color: #f5f6ee; scroll-margin-top: 24px; }
+.promo-demo-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; }
+.promo-demo .section-kicker { color: #aeb1a7; }
+.promo-demo-copy h2 { margin-top: 36px; font-size: clamp(42px, 4.6vw, 67px); line-height: 1.23; }
+.promo-demo-copy h2 span { color: #f8ca46; }
+.promo-demo-copy > p { max-width: 440px; margin-top: 26px; color: #aeb1a7; font-size: 17px; line-height: 1.85; }
+.promo-demo-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 44px; font-size: 13px; font-weight: 700; }
+.promo-demo-steps span:nth-child(even) { color: #f8ca46; }
+.promo-player { width: min(100%, 340px); justify-self: center; }
+.promo-player video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; background: #080908; }
+.promo-player-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; }
+.promo-duration { color: #858b7e; font-size: 11px; letter-spacing: .08em; }
+.promo-sound-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 15px; border: 1px solid #55594d; border-radius: 999px; background: transparent; color: #f5f6ee; font: 700 12px/1 -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; white-space: nowrap; cursor: pointer; }
+.promo-sound-toggle:hover { border-color: #f8ca46; color: #f8ca46; }
 .promo-sound-toggle:focus-visible { outline: 3px solid #f8ca46; outline-offset: 3px; }
 .promo-sound-toggle .sound-on-icon { display: none; }
 .promo-sound-toggle[aria-pressed="true"] .sound-on-icon { display: block; }
 .promo-sound-toggle[aria-pressed="true"] .sound-off-icon { display: none; }
-
-.hero-art .floating-label-top { top: 38px; right: 14px; }
-.hero-art .floating-label-bottom { left: 1%; bottom: 78px; }
-
 @media (max-width: 800px) {
-  .hero-art .phone-hero { top: 86px; left: calc(50% - 214px); width: 225px; }
-  .phone-promo { top: 46px; left: calc(50% - 8px); width: 245px; }
-  .hero-art .floating-label-top { top: 12px; right: 8%; }
-  .hero-art .floating-label-bottom { bottom: 52px; left: 8%; }
+  .promo-demo-grid { grid-template-columns: 1fr; gap: 44px; }
+  .promo-demo-copy > p { max-width: 540px; }
+  .promo-demo-steps { margin-top: 28px; }
 }
-
 @media (max-width: 520px) {
-  .hero-art .phone-hero { top: 86px; left: 2px; width: min(165px, 45vw); }
-  .phone-promo { top: 42px; left: auto; right: 14px; width: min(195px, 54vw); }
-  .phone-promo video { border-radius: 30px; }
-  .promo-sound-toggle { right: 7px; bottom: 9px; min-height: 34px; padding: 0 9px; font-size: 10px; }
-  .hero-art .floating-label-top { top: 12px; right: 0; }
-  .hero-art .floating-label-bottom { bottom: 15px; left: 0; }
+  .promo-demo-copy h2 { font-size: clamp(38px, 9vw, 50px); margin-top: 30px; }
+  .promo-demo-copy > p { font-size: 15px; }
+  .promo-player { width: min(100%, 320px); }
 }
