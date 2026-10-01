@@ -4,25 +4,30 @@
 .promo-demo-copy h2 { margin-top: 36px; font-size: clamp(42px, 4.6vw, 67px); line-height: 1.23; }
 .promo-demo-copy h2 span { color: #f8ca46; }
 .promo-demo-copy > p { max-width: 440px; margin-top: 26px; color: #aeb1a7; font-size: 17px; line-height: 1.85; }
-.promo-demo-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 44px; font-size: 13px; font-weight: 700; }
-.promo-demo-steps span:nth-child(even) { color: #f8ca46; }
-.promo-player { width: min(100%, 340px); justify-self: center; }
-.promo-player video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; background: #080908; }
-.promo-player-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; }
-.promo-duration { color: #858b7e; font-size: 11px; letter-spacing: .08em; }
+.promo-player { width: min(100%, 300px); justify-self: center; }
+.promo-player video { display: block; width: 100%; height: auto; aspect-ratio: 884 / 1920; background: transparent; }
+.promo-player-controls { display: flex; justify-content: flex-end; margin-top: 16px; }
 .promo-sound-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 15px; border: 1px solid #55594d; border-radius: 999px; background: transparent; color: #f5f6ee; font: 700 12px/1 -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; white-space: nowrap; cursor: pointer; }
 .promo-sound-toggle:hover { border-color: #f8ca46; color: #f8ca46; }
 .promo-sound-toggle:focus-visible { outline: 3px solid #f8ca46; outline-offset: 3px; }
 .promo-sound-toggle .sound-on-icon { display: none; }
 .promo-sound-toggle[aria-pressed="true"] .sound-on-icon { display: block; }
 .promo-sound-toggle[aria-pressed="true"] .sound-off-icon { display: none; }
+.features { padding-block: 80px; }
+.features h2 { font-size: clamp(32px, 3vw, 44px); line-height: 1.25; margin-bottom: 32px; }
+.feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.feature-card { min-height: 220px; padding: 30px; }
+.feature-card .inline-link { margin-top: 24px; align-self: flex-start; color: #59501f; font-size: 13px; }
 @media (max-width: 800px) {
   .promo-demo-grid { grid-template-columns: 1fr; gap: 44px; }
   .promo-demo-copy > p { max-width: 540px; }
-  .promo-demo-steps { margin-top: 28px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature-card { min-height: 0; }
 }
 @media (max-width: 520px) {
   .promo-demo-copy h2 { font-size: clamp(38px, 9vw, 50px); margin-top: 30px; }
   .promo-demo-copy > p { font-size: 15px; }
-  .promo-player { width: min(100%, 320px); }
+  .promo-player { width: min(100%, 280px); }
+  .features { padding-block: 60px; }
+  .feature-card { padding: 26px; }
 }
