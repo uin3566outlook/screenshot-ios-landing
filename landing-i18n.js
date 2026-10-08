@@ -85,7 +85,7 @@
       "局部分享 App 当前首页预览与操作演示": "Current ClipShare home screen and product demo",
       "局部分享操作演示：截图、裁剪并分享到聊天 App": "ClipShare demo: capture, crop, and share to a chat app",
       "打开高清首页截图": "Open full-resolution home screen image",
-      "局部分享首页：介绍截图、框选与分享流程，并提供设置极速截图和体验示例入口": "ClipShare home screen with capture, crop, and share guidance, Quick Capture setup, and a sample entry point",
+      "局部分享首页：截图、框选与分享流程，极速截图设置、示例、照片、拍照和粘贴编辑入口": "ClipShare home screen with capture, crop, and share guidance, Quick Capture setup, a sample, Photos, camera, and Paste & Edit",
       "打开高清编辑器截图": "Open full-resolution editor image",
       "局部分享编辑器：原图裁剪、标注、保存到相册与分享操作": "ClipShare editor with crop, annotation, Save to Photos, and share actions",
     },
@@ -171,7 +171,7 @@
       "局部分享 App 当前首页预览与操作演示": "局部分享 App 目前首頁預覽與操作示範",
       "局部分享操作演示：截图、裁剪并分享到聊天 App": "局部分享操作示範：截圖、裁剪並分享到聊天 App",
       "打开高清首页截图": "開啟高解析度首頁截圖",
-      "局部分享首页：介绍截图、框选与分享流程，并提供设置极速截图和体验示例入口": "局部分享首頁：介紹截圖、框選與分享流程，並提供極速截圖設定和體驗範例入口",
+      "局部分享首页：截图、框选与分享流程，极速截图设置、示例、照片、拍照和粘贴编辑入口": "局部分享首頁：截圖、框選與分享流程，極速截圖設定、範例、照片、拍照和貼上編輯入口",
       "打开高清编辑器截图": "開啟高解析度編輯器截圖",
       "局部分享编辑器：原图裁剪、标注、保存到相册与分享操作": "局部分享編輯器：原圖裁剪、標註、儲存至相簿與分享操作",
     },
@@ -199,16 +199,16 @@
   };
   const screenshots = {
     en: {
-      home: ["assets/home-en-4a66b80a.png", 1206, 2622],
-      editor: ["assets/editor-en-7188eb1a.png", 1206, 2622],
+      home: ["assets/home-en-24dafbc1.png", 1206, 2622],
+      editor: ["assets/editor-en-7faebc46.png", 1206, 2622],
     },
     "zh-Hans": {
-      home: ["assets/home-37864b14.png", 1170, 2532],
-      editor: ["assets/editor-5f77dcef.png", 1170, 2532],
+      home: ["assets/home-zh-Hans-c468e3dd.png", 1206, 2622],
+      editor: ["assets/editor-zh-Hans-d2f2bcb3.png", 1206, 2622],
     },
     "zh-Hant": {
-      home: ["assets/home-zh-Hant-a2f56f9c.png", 1206, 2622],
-      editor: ["assets/editor-zh-Hant-189871aa.png", 1206, 2622],
+      home: ["assets/home-zh-Hant-c07cdfc2.png", 1206, 2622],
+      editor: ["assets/editor-zh-Hant-fdc34f81.png", 1206, 2622],
     },
   };
   const promoVideo = document.querySelector("[data-promo-video]");
