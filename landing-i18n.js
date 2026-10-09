@@ -4,20 +4,24 @@
   const supported = ["zh-Hans", "zh-Hant", "en"];
   const translations = {
     en: {
+      "摘享裁剪宣传图": "ClipShare cropping preview",
+      "摘享标注宣传图": "ClipShare annotation preview",
+      "摘享分享宣传图": "ClipShare sharing preview",
+
       "跳到主要内容": "Skip to main content",
-      "局部分享": "ClipShare",
+      "摘享": "ClipShare",
       "产品体验": "Experience",
       "操作演示": "Demo",
       "实用功能": "Features",
-      "单指框选，双指调整。裁完直接发到聊天 App，快捷截图无需存入相册。": "Crop with one finger or adjust with two. Share straight to chat, without saving Quick Capture images to Photos.",
+      "摘出重点，分享所想。裁剪、标注、遮挡隐私，编辑后直接分享。": "Keep the point. Share the picture. Crop, annotate, hide private details, and share right from the editor.",
       "轻松裁剪，": "Crop with ease.",
       "分享一步到位。": "Send it to chat.",
-      "框选需要的部分，点分享即可发送到 WhatsApp 等聊天 App，无需先保存图片、再去相册寻找。": "Crop the part you need and share it straight to WhatsApp or another chat app. No saving to Photos or searching for the image.",
+      "框选需要的部分，添加箭头或文字，再通过系统分享面板发到常用 App。无需先保存图片、再去相册寻找。": "Crop the part you need, add an arrow or a note, and send it through the iOS share sheet. No saving to Photos or searching for the image.",
       "裁得顺手，分享轻松。": "Easy to crop. Easy to share.",
       "单指，选出重点": "One finger. Select what matters.",
       "拖动框选、移动选区，或拖动边线微调。一个手指就能完成。": "Drag to select, move the crop, or fine-tune its edges. All with one finger.",
-      "双指，轻松调整": "Two fingers. Adjust with ease.",
-      "双指在选区内移动、捏合，轻松调整位置和大小。": "Pan or pinch inside the crop with two fingers to adjust its position and size.",
+      "标注，一眼看懂": "Mark it up. Make it clear.",
+      "箭头、文字、涂鸦，把想说的标清楚。": "Add arrows, text and drawings to make your point clear.",
       "直接分享，相册不留图": "Share directly. Keep Photos clear.",
       "用快捷截图截取、编辑后直接分享，原图和分享图都不会自动存入相册。只有你选择保存，图片才会写入相册。": "Capture, edit, and share with Quick Capture. Neither the original nor the shared image is automatically saved to Photos. Save only when you choose to.",
       "功能亮点": "Features",
@@ -42,7 +46,7 @@
       "从整张屏幕，": "From the whole screen,",
       "到": "to",
       "真正想说的那一点。": "the part that matters.",
-      "不必先把截图存进相册，再打开聊天软件寻找图片。局部分享把裁剪和说明放进同一个顺手的流程，让信息刚刚好。": "No need to save a screenshot to Photos, then hunt for it in a chat app. ClipShare puts cropping and annotation in one smooth flow.",
+      "不必先把截图存进相册，再打开聊天软件寻找图片。摘享把裁剪和说明放进同一个顺手的流程，让信息刚刚好。": "No need to save a screenshot to Photos, then hunt for it in a chat app. ClipShare puts cropping and annotation in one smooth flow.",
       "一步聚焦": "Focus in one step",
       "指尖框选，": "Crop with a touch,",
       "重点自然出现。": "keep the focus.",
@@ -79,31 +83,35 @@
       "隐私政策": "Privacy Policy",
       "使用条款": "Terms of Use",
       "支持": "Support",
-      "局部分享，返回顶部": "ClipShare, back to top",
+      "摘享，返回顶部": "ClipShare, back to top",
       "页面导航": "Page navigation",
-      "局部分享 App 当前首页预览": "Current ClipShare app home screen preview",
-      "局部分享 App 当前首页预览与操作演示": "Current ClipShare home screen and product demo",
-      "局部分享操作演示：截图、裁剪并分享到聊天 App": "ClipShare demo: capture, crop, and share to a chat app",
+      "摘享 App 当前首页预览": "Current ClipShare app home screen preview",
+      "摘享 App 当前首页预览与操作演示": "Current ClipShare home screen and product demo",
+      "摘享操作演示：截图、裁剪并分享到聊天 App": "ClipShare demo: capture, crop, and share to a chat app",
       "打开高清首页截图": "Open full-resolution home screen image",
-      "局部分享首页：截图、框选与分享流程，极速截图设置、示例、照片、拍照和粘贴编辑入口": "ClipShare home screen with capture, crop, and share guidance, Quick Capture setup, a sample, Photos, camera, and Paste & Edit",
+      "摘享首页：截图、框选与分享流程，极速截图设置、示例、照片、拍照和粘贴编辑入口": "ClipShare home screen with capture, crop, and share guidance, Quick Capture setup, a sample, Photos, camera, and Paste & Edit",
       "打开高清编辑器截图": "Open full-resolution editor image",
-      "局部分享编辑器：原图裁剪、标注、保存到相册与分享操作": "ClipShare editor with crop, annotation, Save to Photos, and share actions",
+      "摘享编辑器：原图裁剪、标注、保存到相册与分享操作": "ClipShare editor with crop, annotation, Save to Photos, and share actions",
     },
     "zh-Hant": {
+      "摘享裁剪宣传图": "摘享裁切宣傳圖",
+      "摘享标注宣传图": "摘享標註宣傳圖",
+      "摘享分享宣传图": "摘享分享宣傳圖",
+
       "跳到主要内容": "跳到主要內容",
-      "局部分享": "局部分享",
+      "摘享": "摘享",
       "产品体验": "產品體驗",
       "操作演示": "操作示範",
       "实用功能": "實用功能",
-      "单指框选，双指调整。裁完直接发到聊天 App，快捷截图无需存入相册。": "單指框選，雙指調整。裁完直接傳到聊天 App，快速截圖無需存入相簿。",
+      "摘出重点，分享所想。裁剪、标注、遮挡隐私，编辑后直接分享。": "摘出重點，分享所想。裁切、標註、遮擋隱私，編輯後直接分享。",
       "轻松裁剪，": "輕鬆裁剪，",
       "分享一步到位。": "分享一步到位。",
-      "框选需要的部分，点分享即可发送到 WhatsApp 等聊天 App，无需先保存图片、再去相册寻找。": "框選需要的部分，點選分享即可傳送到 WhatsApp 等聊天 App，無需先儲存圖片、再到相簿尋找。",
+      "框选需要的部分，添加箭头或文字，再通过系统分享面板发到常用 App。无需先保存图片、再去相册寻找。": "框選需要的部分，加入箭頭或文字，再透過系統分享面板傳到常用 App。無需先儲存圖片、再到相簿尋找。",
       "裁得顺手，分享轻松。": "裁得順手，分享輕鬆。",
       "单指，选出重点": "單指，選出重點",
       "拖动框选、移动选区，或拖动边线微调。一个手指就能完成。": "拖動框選、移動選取區域，或拖動邊線微調。一個手指就能完成。",
-      "双指，轻松调整": "雙指，輕鬆調整",
-      "双指在选区内移动、捏合，轻松调整位置和大小。": "雙指在選取區域內移動、捏合，輕鬆調整位置和大小。",
+      "标注，一眼看懂": "標註，一眼看懂",
+      "箭头、文字、涂鸦，把想说的标清楚。": "箭頭、文字、塗鴉，把想說的標清楚。",
       "直接分享，相册不留图": "直接分享，相簿不留圖",
       "用快捷截图截取、编辑后直接分享，原图和分享图都不会自动存入相册。只有你选择保存，图片才会写入相册。": "用快速截圖擷取、編輯後直接分享，原圖和分享圖都不會自動存入相簿。只有你選擇儲存，圖片才會寫入相簿。",
       "功能亮点": "功能亮點",
@@ -128,7 +136,7 @@
       "从整张屏幕，": "從整張螢幕，",
       "到": "到",
       "真正想说的那一点。": "真正想說的那一點。",
-      "不必先把截图存进相册，再打开聊天软件寻找图片。局部分享把裁剪和说明放进同一个顺手的流程，让信息刚刚好。": "不必先把截圖存進相簿，再打開聊天 App 尋找圖片。局部分享把裁剪和說明放在同一個順手的流程，讓資訊剛剛好。",
+      "不必先把截图存进相册，再打开聊天软件寻找图片。摘享把裁剪和说明放进同一个顺手的流程，让信息刚刚好。": "不必先把截圖存進相簿，再打開聊天 App 尋找圖片。摘享把裁剪和說明放在同一個順手的流程，讓資訊剛剛好。",
       "一步聚焦": "一步聚焦",
       "指尖框选，": "指尖框選，",
       "重点自然出现。": "重點自然出現。",
@@ -165,32 +173,32 @@
       "隐私政策": "隱私政策",
       "使用条款": "使用條款",
       "支持": "支援",
-      "局部分享，返回顶部": "局部分享，返回頂部",
+      "摘享，返回顶部": "摘享，返回頂部",
       "页面导航": "頁面導覽",
-      "局部分享 App 当前首页预览": "局部分享 App 目前首頁預覽",
-      "局部分享 App 当前首页预览与操作演示": "局部分享 App 目前首頁預覽與操作示範",
-      "局部分享操作演示：截图、裁剪并分享到聊天 App": "局部分享操作示範：截圖、裁剪並分享到聊天 App",
+      "摘享 App 当前首页预览": "摘享 App 目前首頁預覽",
+      "摘享 App 当前首页预览与操作演示": "摘享 App 目前首頁預覽與操作示範",
+      "摘享操作演示：截图、裁剪并分享到聊天 App": "摘享操作示範：截圖、裁剪並分享到聊天 App",
       "打开高清首页截图": "開啟高解析度首頁截圖",
-      "局部分享首页：截图、框选与分享流程，极速截图设置、示例、照片、拍照和粘贴编辑入口": "局部分享首頁：截圖、框選與分享流程，極速截圖設定、範例、照片、拍照和貼上編輯入口",
+      "摘享首页：截图、框选与分享流程，极速截图设置、示例、照片、拍照和粘贴编辑入口": "摘享首頁：截圖、框選與分享流程，極速截圖設定、範例、照片、拍照和貼上編輯入口",
       "打开高清编辑器截图": "開啟高解析度編輯器截圖",
-      "局部分享编辑器：原图裁剪、标注、保存到相册与分享操作": "局部分享編輯器：原圖裁剪、標註、儲存至相簿與分享操作",
+      "摘享编辑器：原图裁剪、标注、保存到相册与分享操作": "摘享編輯器：原圖裁剪、標註、儲存至相簿與分享操作",
     },
   };
 
   const titles = {
-    "zh-Hans": "局部分享 — 截图，只发重点",
-    "zh-Hant": "局部分享 — 截圖，只傳重點",
+    "zh-Hans": "摘享 — 截图，只发重点",
+    "zh-Hant": "摘享 — 截圖，只傳重點",
     en: "ClipShare — Share the point",
   };
   const descriptions = {
-    "zh-Hans": "单指框选、双指调整，裁完直接分享到聊天 App。快捷截图的原图和分享图不会自动存入相册。",
-    "zh-Hant": "單指框選、雙指調整，裁完直接分享到聊天 App。快速截圖的原圖和分享圖不會自動存入相簿。",
-    en: "Crop with one finger or adjust with two. Share directly to chat, without automatically saving Quick Capture images to Photos.",
+    "zh-Hans": "摘享：摘出重点，分享所想。裁剪截图、添加标注、遮挡隐私，编辑后直接分享。",
+    "zh-Hant": "摘享：摘出重點，分享所想。裁切截圖、加入標註、遮擋隱私，編輯後直接分享。",
+    en: "ClipShare: crop screenshots, add annotations, hide private details and share directly from your iPhone.",
   };
   const socialDescriptions = {
-    "zh-Hans": "单指框选、双指调整，裁完直接分享到聊天 App。快捷截图的原图和分享图不会自动存入相册。",
-    "zh-Hant": "單指框選、雙指調整，裁完直接分享到聊天 App。快速截圖的原圖和分享圖不會自動存入相簿。",
-    en: "Crop with one finger or adjust with two. Share directly to chat, without automatically saving Quick Capture images to Photos.",
+    "zh-Hans": "摘享：摘出重点，分享所想。裁剪截图、添加标注、遮挡隐私，编辑后直接分享。",
+    "zh-Hant": "摘享：摘出重點，分享所想。裁切截圖、加入標註、遮擋隱私，編輯後直接分享。",
+    en: "ClipShare: crop screenshots, add annotations, hide private details and share directly from your iPhone.",
   };
   const storeAvailableLabels = {
     "zh-Hans": "在 App Store 下载",
@@ -198,18 +206,87 @@
     en: "Download on the App Store",
   };
   const screenshots = {
-    en: {
-      home: ["assets/home-en-24dafbc1.png", 1206, 2622],
-      editor: ["assets/editor-en-7faebc46.png", 1206, 2622],
+    "en": {
+      "home": [
+        "assets/home-en-03801188.png",
+        1206,
+        2622
+      ],
+      "editor": [
+        "assets/editor-en-ff034fdd.png",
+        1206,
+        2622
+      ],
+      "crop": [
+        "assets/promo-crop-en-5aab0c18.png",
+        1206,
+        2622
+      ],
+      "markup": [
+        "assets/promo-markup-en-94c3c4c9.png",
+        1206,
+        2622
+      ],
+      "share": [
+        "assets/promo-share-en-33dd8e47.png",
+        1206,
+        2622
+      ]
     },
     "zh-Hans": {
-      home: ["assets/home-zh-Hans-c468e3dd.png", 1206, 2622],
-      editor: ["assets/editor-zh-Hans-d2f2bcb3.png", 1206, 2622],
+      "home": [
+        "assets/home-zh-Hans-a55d53de.png",
+        1206,
+        2622
+      ],
+      "editor": [
+        "assets/editor-zh-Hans-ed53d60d.png",
+        1206,
+        2622
+      ],
+      "crop": [
+        "assets/promo-crop-zh-Hans-326c4892.png",
+        1206,
+        2622
+      ],
+      "markup": [
+        "assets/promo-markup-zh-Hans-011b829f.png",
+        1206,
+        2622
+      ],
+      "share": [
+        "assets/promo-share-zh-Hans-ce6fc3ca.png",
+        1206,
+        2622
+      ]
     },
     "zh-Hant": {
-      home: ["assets/home-zh-Hant-c07cdfc2.png", 1206, 2622],
-      editor: ["assets/editor-zh-Hant-fdc34f81.png", 1206, 2622],
-    },
+      "home": [
+        "assets/home-zh-Hant-92b0b307.png",
+        1206,
+        2622
+      ],
+      "editor": [
+        "assets/editor-zh-Hant-f64cb7b6.png",
+        1206,
+        2622
+      ],
+      "crop": [
+        "assets/promo-crop-zh-Hant-d6298d3f.png",
+        1206,
+        2622
+      ],
+      "markup": [
+        "assets/promo-markup-zh-Hant-2e584449.png",
+        1206,
+        2622
+      ],
+      "share": [
+        "assets/promo-share-zh-Hant-9e820a1a.png",
+        1206,
+        2622
+      ]
+    }
   };
   const promoVideo = document.querySelector("[data-promo-video]");
   const soundButton = document.querySelector("[data-promo-sound]");

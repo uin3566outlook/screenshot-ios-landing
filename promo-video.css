@@ -31,3 +31,10 @@
   .features { padding-block: 60px; }
   .feature-card { padding: 26px; }
 }
+
+.feature-card { justify-content: flex-start; gap: 28px; }
+.feature-card > div { min-height: 155px; }
+.feature-preview { display: block; overflow: hidden; border-radius: 12px; width: 100%; cursor: zoom-in; }
+.feature-preview img { display: block; width: 100%; height: auto; }
+.feature-preview:focus-visible { outline: 3px solid #f8ca46; outline-offset: 5px; }
+@media (max-width: 900px) { .feature-preview { max-width: 360px; margin-inline: auto; } .feature-card > div { min-height: 0; } }
