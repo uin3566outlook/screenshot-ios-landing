@@ -11,3 +11,10 @@
 @media(max-width:800px){.header-link{display:none}.language-picker{margin-left:auto}}
 @media(max-width:520px){.header-inner{gap:12px}.language-picker{padding:3px}.language-picker button{min-width:30px;min-height:29px;padding:0 5px}.footer-inner{justify-content:flex-start}.footer-inner>span{order:0;width:auto}}
 @media(prefers-reduced-motion:reduce){.language-picker button{transition:none}}
+html:lang(ja){font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
+html:lang(ko){font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:break-word}
+html:lang(ja) .hero h1,html:lang(ko) .hero h1{font-size:clamp(46px,5.2vw,76px);white-space:normal;letter-spacing:-.045em}
+html:lang(ja) .promo-demo-copy h2,html:lang(ko) .promo-demo-copy h2{font-size:clamp(36px,4.2vw,60px)}
+video::cue{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;background:rgba(17,18,15,.9);color:#fff}
+@media(max-width:520px){.header-inner{height:auto;min-height:62px;flex-wrap:wrap;padding-block:10px;row-gap:10px}.language-picker button{min-height:36px}html:lang(ja) .hero h1,html:lang(ko) .hero h1{font-size:clamp(36px,10vw,52px)}html:lang(ja) .promo-demo-copy h2,html:lang(ko) .promo-demo-copy h2{font-size:clamp(32px,8vw,42px)}}
+@media(max-width:375px){html:lang(en) .hero h1{font-size:clamp(40px,13vw,48px)}}
