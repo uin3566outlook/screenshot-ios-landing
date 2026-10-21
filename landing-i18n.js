@@ -529,6 +529,7 @@
     }
   };
   const promoVideo = document.querySelector("[data-promo-video]");
+  const releasedLanguages = window.clipshareReleasedLanguages || ["zh-Hans", "zh-Hant", "en"];
   const soundButton = document.querySelector("[data-promo-sound]");
   const soundLabels = {
     en: ["Turn sound on", "Turn sound off"],
@@ -599,6 +600,7 @@
 
   const render = (language, remember) => {
     language = normalizeLanguage(language);
+    if (!releasedLanguages.includes(language)) language = "en";
     const copy = translations[language] || {};
     for (const { node, original, key } of textNodes) {
       const translated = storeAvailable && key === "即将登陆 App Store"
@@ -636,7 +638,8 @@
       track.mode = track.language === language ? "showing" : "disabled";
     }
     renderSoundButton(language);
-    if (remember) {
+    const requestedLanguage = new URLSearchParams(location.search).get("lang");
+    if (remember || (requestedLanguage && requestedLanguage !== language)) {
       const url = new URL(location.href);
       url.searchParams.set("lang", language);
       history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
